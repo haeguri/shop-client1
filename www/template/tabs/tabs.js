@@ -1,10 +1,10 @@
 angular.module('radio.controller')
 
-	.controller('TabsCtrl', function($scope, $ionicSlideBoxDelegate) {
+	.controller('TabsCtrl', function($scope, $ionicSlideBoxDelegate, $ionicHistory, $state) {
 
 		$scope.tabs = {};
 
-		$scope.tabs.slideUpdate = function() {
-			$ionicSlideBoxDelegate.update();
+		$scope.tabs.clearCache = function() {
+			$ionicHistory.clearCache()
 		}
 	});
