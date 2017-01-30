@@ -2,7 +2,7 @@
 
 # Radio
 
-## Framework
+## Requirements
 
 - Ionic v1.0.0-beta.14
 - AngularJS v1.3.6
