@@ -22,6 +22,7 @@ angular.module('radio.service')
 					'method':'GET',
 					'extra_url':'/genders/'+gender_id+'/brands',
 				}).then(function(response) {
+					console.log(response.data);
 					return response.data;
 				});
 			},

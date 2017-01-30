@@ -251,30 +251,4 @@ angular.module('radio', [
   $ionicConfigProvider.backButton.text('').icon('fa fa-arrow-left fa-lg').previousTitleText(false);
 
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
-
-  //$ionicConfigProvider.views.maxCache(0);
-  
-  /*
-  $httpProvider.interceptors.push(function($rootScope) {
-    return {
-      request: function(config) {
-        $rootScope.$broadcast('loading:show');
-        return config;
-      },
-      response: function(response) {
-        $rootScope.$broadcast('loading:hide');
-        return response;
-      }
-    }
-  })
-  */
-
-})
-.directive('backImg', function(){
-    return function(scope, element, attrs){
-        var url = attrs.backImg;
-        element.css({
-            'background': 'url(' + url +') no-repeat center center fixed'
-        })
-    }
 })

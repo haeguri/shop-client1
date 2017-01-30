@@ -12,8 +12,8 @@
     </ion-nav-title>
     <ion-content has-bouncing="true">
       <ion-slide-box on-slide-changed="slideHasChanged($index)" class="product-image-slides" has-bouncing="false">
-        <ion-slide ng-repeat="image_obj in product_detail.product.images" ng-init="product_detail.resizeSlides()">
-          <img ng-src="{{image_obj.image}}">
+        <ion-slide>
+            <img ng-src="{{product_detail.product.image}}" alt="">
         </ion-slide>
       </ion-slide-box>
       <div class="list">
@@ -47,7 +47,7 @@ Exact shipping options and transit times will be provided at checkout.</p>
         <div class="item">
           <h4 style="margin: 10px 0px 30px 0px">Related Products</h4>
           <div class="product-thumbnail" ng-repeat="product in product_detail.products_of_brand">
-            <img ng-src="{{product.images[0].image}}">
+            <img ng-src="{{product.image}}">
             <div>
                 <i class="fa fa-heart-o"></i>
             </div>
@@ -63,33 +63,3 @@ Exact shipping options and transit times will be provided at checkout.</p>
       </div>
     </ion-footer-bar>
 </ion-view>
-
-
-<!--
-  <div class="item item-avatar">
-    <img src="{{shop_detail.product.brand.image}}">
-    <div id="shop-detail-desginer">
-      <h4>{{shop_detail.product.brand.name}}</h4>
-      <h2>{{shop_detail.product.name}}</h2>
-    </div>
-    <div id="shop-detail-like">
-      <i class="fa fa-heart fa-lg" data-like="{{shop_detail.product.like}}" ng-click="shop_detail.productLike(shop_detail.product.id)"></i><span>{{shop_detail.product.product_likes_of_product.length}}명이 좋아합니다.</span>
-    </div>
-  </div>
-  <div class="list">
-      <label class="item item-input item-select">
-        <div class="input-label">색상</div>
-        <select ng-options="color for color in shop_detail.colors" ng-model="shop_detail.select_color"></select>
-      </label>
-      <label class="item item-input item-select">
-        <span class="input-label">사이즈</span>
-        <select ng-options="size for size in shop_detail.sizes" ng-model="shop_detail.select_size"></select>
-      </label>
-      <label class="item item-input item-select">
-        <span class="input-label">수량</span>
-        <select ng-options="quantity for quantity in shop_detail.quantities" ng-model="shop_detail.select_quantity"></select>
-      </label>
-  </div>
-  <button class="button button-assertive pull-right">즉시구매</button>
-  <button class="button button-positive pull-right" ng-click="shop_detail.addToCart()">장바구니 담기</button>
--->

@@ -1,5 +1,5 @@
 angular.module('radio.controller')
-	.controller('LoginCtrl', function(RadioAuth, Validate, $scope, $location, $ionicPopup){
+	.controller('LoginCtrl', function(RadioAuth, $scope, $location, $ionicPopup){
 		$scope.login = {};
 
 		$scope.requestLogin = function() {
@@ -14,7 +14,5 @@ angular.module('radio.controller')
 				$scope.login.password = '';
 			});
 		}
-
-		$scope.login.window_width = $(window).width();
 		
 	});

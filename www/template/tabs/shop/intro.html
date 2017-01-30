@@ -30,7 +30,7 @@
                 <ion-slide ng-repeat="i in shop_intro.tags">
                     <div class="product-thumbnail"  ng-repeat="product in shop_intro.tags[$index].products"
                                                     ng-click="shop_intro.openProductDetail(product.id)">
-                        <img ng-src="{{product.images[0].image}}">
+                        <img ng-src="{{product.image}}">
                         <div>
                             <i class="fa fa-heart-o"></i>
                         </div>

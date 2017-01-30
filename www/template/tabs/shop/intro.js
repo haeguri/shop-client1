@@ -68,6 +68,7 @@ angular.module('radio.controller')
 			if($scope.shop_intro.selectedTag != undefined && $scope.shop_intro.selectedTag.isLoaded === false) {
 				$scope.shop_intro.selectedTag.isLoaded = true;
 				resetCondition(tag_index);
+				console.log($scope.shop_intro.tags[tag_index].lastLoadedPage);
 				Shop.getProducts({
 					'params':{
 						'page':++$scope.shop_intro.tags[tag_index].lastLoadedPage
@@ -89,18 +90,19 @@ angular.module('radio.controller')
 		}
 			
 		var loadMore = function(data, tag_index) {
-			for (var i in data.results) {
-				var element = data.results[i].likes_of_product;
+			for (var i in data) {
+				var element = data[i].likes_of_product;
 				for (var j in element) {
 					if (element[j].user == $scope.user.id) {
-						data.results[i]['like'] = true;
+						data[i]['like'] = true;
 						break;
 					} else {
-						data.results[i]['like'] = false;
+						data[i]['like'] = false;
 					}
 				}
 			}
-			$scope.shop_intro.tags[tag_index].products = $scope.shop_intro.tags[tag_index].products.concat(data.results);
+			$scope.shop_intro.tags[tag_index].products = $scope.shop_intro.tags[tag_index].products.concat(data);
+			console.log($scope.shop_intro.tags[tag_index].products);
 		}
 
 		$scope.shop_intro.toggleLike = function(product_id) {

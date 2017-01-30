@@ -26,7 +26,7 @@
           </div>
           <ion-scroll direction="x" has-bouncing="false" class="wide-as-needed" style="margin-top:10px">
             <div class="brand-product-thumbnail" ng-repeat="product in brand.products_of_brand">
-              <img ng-src="{{product.images[0].image}}">
+              <img ng-src="{{product.image}}">
               <h5>{{product.name}}</h5>
               <p>{{product.price  | number:0  }}</p>
             </div>

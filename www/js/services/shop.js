@@ -44,7 +44,7 @@ angular.module('radio.service')
 					'extra_url': '/genders/' + args.gender_id + '/tags/' + args.tag_id + '/products',
 					'params':params
 			}).then(function(response) {
-					return response.data;
+					return response.data.hasOwnProperty('results') ? response.data.results : response.data;
 				});
 			},
 			'getProduct' : function(args) {
