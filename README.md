@@ -1,11 +1,13 @@
+<img src="./doc/screen1.png" width="40%" style="float:left" alt="screen-1"/><img src="./doc/screen2.png" width="40%" style="float:left" alt="screen-2"/>
+
 # Radio
 
-<img src="./doc/screen1.png" width="40%" style="box-sizing:border-box;float:left;border:solid 1px black;" alt="screen-1"/><img src="./doc/screen2.png" width="40%" style="margin-left:5%; box-sizing:border-box;border:solid 1px black;float:left;" alt="screen-2"/>
+## Framework
 
-###[데모 영상](https://www.youtube.com/watch?v=RFWTNNT7i5M)
+- Ionic v1.0.0-beta.14
+- AngularJS v1.3.6
 
-
-## 모듈 구조
+## Module Structure
 	 radio
        |- radio.service
           |- RadioAuth
