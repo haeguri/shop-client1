@@ -1,6 +1,8 @@
 <img src="./doc/screen1.png" width="40%" style="float:left" alt="screen-1"/><img src="./doc/screen2.png" width="40%" style="float:left" alt="screen-2"/>
 
 # Radio
+ 
+- [Server Repository](http://github.com/pacebook/shop-server)
 
 ## Requirements
 
